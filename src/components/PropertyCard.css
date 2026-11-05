@@ -1,0 +1,122 @@
+.property-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: var(--c-50);
+  border: 1px solid var(--c-200);
+  border-radius: 1.1rem;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 32px rgba(var(--accent-rgb), 0.14);
+}
+
+.property-card-media {
+  position: relative;
+  height: 230px;
+  margin: 0.75rem 0.75rem 0;
+  border-radius: 999px 999px 0 0;
+  overflow: hidden;
+}
+
+.property-card-count {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 1;
+  background: rgba(33, 37, 41, 0.82);
+  color: var(--c-50);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.property-card-body {
+  padding: 1rem 1.15rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.property-card-price {
+  margin: 0;
+  color: var(--c-800);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.property-card-price small {
+  margin-left: 0.25rem;
+  color: var(--c-500);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.property-card-body h3 {
+  margin: 0.15rem 0 0;
+  color: var(--c-800);
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.property-card-location {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.property-card-meta {
+  margin: 0;
+  color: var(--c-500);
+  font-size: 0.88rem;
+}
+
+.property-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.property-card-tags span {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: var(--c-100);
+  color: var(--c-700);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.property-card-by {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.45rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--c-200);
+  color: var(--c-500);
+  font-size: 0.82rem;
+}
+
+.property-card-av {
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--c-800);
+  color: var(--c-50);
+  font-size: 0.75rem;
+  font-weight: 700;
+}

@@ -1,0 +1,36 @@
+.cursor-glow {
+  --x: -100px;
+  --y: -100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translate3d(var(--x), var(--y), 0);
+}
+
+.cursor-glow-core {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  background: rgba(var(--accent-rgb), 0.45);
+  box-shadow: 0 0 0 12px rgba(var(--accent-rgb), 0.18);
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.cursor-glow.is-hot .cursor-glow-core {
+  transform: scale(1.7);
+  background: rgba(var(--accent-rgb), 0.6);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 14px rgba(var(--accent-rgb), 0.26);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
+}

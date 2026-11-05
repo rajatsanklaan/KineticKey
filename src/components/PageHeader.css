@@ -1,0 +1,5 @@
+.page-header {
+  padding: 3.2rem 0 1.5rem;
+  background: color-mix(in srgb, var(--accent) 18%, var(--c-50));
+  border-bottom: 1px solid var(--c-200);
+}

@@ -1,0 +1,122 @@
+.search-bar {
+  display: grid;
+  grid-template-columns: 1.2fr auto 0.85fr auto 1.1fr auto;
+  align-items: center;
+  gap: 0;
+  width: min(100%, 52rem);
+  padding: 0.55rem 0.55rem 0.55rem 1.15rem;
+  background: rgba(248, 249, 250, 0.96);
+  border: 1px solid rgba(248, 249, 250, 0.8);
+  border-radius: 999px;
+  box-shadow:
+    0 18px 40px rgba(33, 37, 41, 0.18),
+    0 2px 0 rgba(255, 255, 255, 0.7) inset;
+  backdrop-filter: blur(10px);
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.12rem;
+  min-width: 0;
+  padding: 0.35rem 0.85rem 0.35rem 0;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.search-field span {
+  line-height: 1;
+}
+
+.search-field select {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: var(--c-800);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 L6 6.5 L11 1.5' fill='none' stroke='%23495057' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.1rem center;
+  padding-right: 1.1rem;
+}
+
+.search-field select:focus {
+  color: var(--accent);
+}
+
+.search-divider {
+  width: 1px;
+  height: 2.2rem;
+  background: var(--c-200);
+}
+
+.search-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 3rem;
+  min-width: 7.5rem;
+  margin-left: 0.35rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  background: var(--accent);
+  color: var(--c-50);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.search-submit:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.search-submit:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+  .search-bar {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 0.35rem;
+    padding: 0.85rem;
+    border-radius: 1.2rem;
+  }
+
+  .search-field {
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.85rem;
+    background: var(--c-100);
+  }
+
+  .search-field select {
+    background-position: right 0.55rem center;
+    padding-right: 1.4rem;
+  }
+
+  .search-divider {
+    display: none;
+  }
+
+  .search-submit {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+}

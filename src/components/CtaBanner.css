@@ -1,0 +1,45 @@
+.cta-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--c-800);
+  color: var(--c-100);
+  border-radius: 1.3rem;
+}
+
+.cta-banner h2 {
+  margin: 0.3rem 0 0;
+  color: var(--c-50);
+  max-width: 28rem;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  letter-spacing: -0.04em;
+}
+
+.cta-banner .eyebrow {
+  color: var(--accent);
+}
+
+.cta-banner .btn-line {
+  color: var(--c-50);
+  border-color: var(--c-600);
+}
+
+.cta-banner .btn-line:hover {
+  background: var(--c-700);
+  border-color: var(--c-500);
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+@media (max-width: 800px) {
+  .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

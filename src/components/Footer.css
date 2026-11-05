@@ -1,0 +1,56 @@
+.footer {
+  margin-top: auto;
+  padding: 2.5rem 0 1.4rem;
+  background: var(--c-800);
+  color: var(--c-400);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--c-700);
+}
+
+.footer strong {
+  color: var(--c-50);
+  font-size: 1.1rem;
+}
+
+.footer p {
+  margin: 0.55rem 0 0;
+  max-width: 22rem;
+  line-height: 1.6;
+}
+
+.footer-grid div p:first-child {
+  margin: 0 0 0.5rem;
+  color: var(--c-300);
+  font-weight: 600;
+}
+
+.footer button {
+  display: block;
+  border: 0;
+  padding: 0.25rem 0;
+  background: none;
+  color: var(--c-400);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer button:hover {
+  color: var(--accent);
+}
+
+.footer-copy {
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

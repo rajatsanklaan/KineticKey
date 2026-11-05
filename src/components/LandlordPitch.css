@@ -1,0 +1,421 @@
+.landlord-pitch {
+  padding: 4.5rem 0 0;
+  background: var(--c-50);
+  overflow: hidden;
+  border-top: 1px solid var(--c-200);
+}
+
+.landlord-pitch-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.landlord-pitch-copy {
+  max-width: 44rem;
+}
+
+.landlord-pitch-copy h2 {
+  margin: 0;
+  color: var(--c-800);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.landlord-pitch-lead {
+  margin: 1.1rem 0 0;
+  color: var(--c-700);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.45;
+}
+
+.landlord-pitch-body {
+  margin: 0.85rem auto 0;
+  max-width: 36rem;
+  color: var(--c-500);
+  line-height: 1.6;
+}
+
+.landlord-pitch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.4rem;
+  margin-top: 1.8rem;
+}
+
+.landlord-pitch-link {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--c-800);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.28em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.landlord-pitch-link:hover {
+  color: var(--accent);
+}
+
+.landlord-pitch-cta {
+  min-width: 10.5rem;
+  background: var(--c-800);
+  color: var(--c-50);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  border-radius: 0.85rem;
+  padding: 0.95rem 1.6rem;
+}
+
+.landlord-pitch-cta:hover {
+  background: var(--accent);
+}
+
+.landlord-phones {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.1rem;
+  width: 100%;
+  max-width: 52rem;
+  margin-top: 3rem;
+  min-height: 22rem;
+}
+
+.phone {
+  width: min(210px, 28vw);
+  background: var(--c-800);
+  border: 3px solid var(--c-700);
+  border-radius: 1.7rem 1.7rem 0 0;
+  border-bottom: 0;
+  box-shadow: 0 18px 40px rgba(33, 37, 41, 0.18);
+  overflow: hidden;
+  transform-origin: bottom center;
+  animation: phone-rise 0.7s ease both;
+}
+
+.phone-left {
+  transform: translateY(2.4rem) rotate(-4deg);
+  animation-delay: 0.05s;
+}
+
+.phone-center {
+  width: min(230px, 30vw);
+  z-index: 2;
+  transform: translateY(0.4rem);
+  animation-delay: 0.15s;
+}
+
+.phone-right {
+  transform: translateY(2.4rem) rotate(4deg);
+  animation-delay: 0.25s;
+}
+
+.phone-notch {
+  width: 38%;
+  height: 0.55rem;
+  margin: 0.55rem auto 0.35rem;
+  border-radius: 999px;
+  background: var(--c-700);
+}
+
+.phone-screen {
+  background: var(--c-50);
+  min-height: 20rem;
+}
+
+.phone-bar {
+  padding: 0.85rem 0.85rem 0.7rem;
+  background: var(--accent);
+  color: var(--c-50);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.phone-pad {
+  padding: 0.85rem;
+  text-align: left;
+}
+
+.phone-label {
+  margin: 0 0 0.55rem;
+  color: var(--c-500);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.phone-stars {
+  margin: 0 0 0.9rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.phone-stars li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--c-700);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.phone-star-row {
+  display: inline-flex;
+  gap: 0.12rem;
+}
+
+.phone-star-row i {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 0.08rem;
+  background: var(--accent);
+  display: block;
+}
+
+.phone-card {
+  padding: 0.7rem 0.75rem;
+  border: 1px solid var(--c-200);
+  border-radius: 0.75rem;
+  background: var(--c-100);
+}
+
+.phone-card strong {
+  display: block;
+  color: var(--c-800);
+  font-size: 0.78rem;
+}
+
+.phone-card p {
+  margin: 0.25rem 0 0;
+  color: var(--c-700);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.phone-card span {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--c-500);
+  font-size: 0.72rem;
+}
+
+.phone-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+  height: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.phone-bars span {
+  flex: 1;
+  border-radius: 0.25rem 0.25rem 0.1rem 0.1rem;
+  background: linear-gradient(180deg, var(--accent), #f0a06a);
+}
+
+.phone-ring-wrap {
+  position: relative;
+  width: 6.2rem;
+  height: 6.2rem;
+  margin: 0.2rem auto 0.7rem;
+}
+
+.phone-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--accent) 0 82%,
+    var(--c-800) 82% 92%,
+    var(--c-300) 92% 100%
+  );
+  mask: radial-gradient(circle at center, transparent 54%, #000 55%);
+  -webkit-mask: radial-gradient(circle at center, transparent 54%, #000 55%);
+}
+
+.phone-ring-copy {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.phone-ring-copy strong {
+  color: var(--c-800);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.phone-ring-copy span {
+  color: var(--c-500);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.phone-legend {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.25rem;
+  color: var(--c-600);
+  font-size: 0.72rem;
+}
+
+.phone-legend i {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-right: 0.35rem;
+  border-radius: 50%;
+  background: var(--c-400);
+}
+
+.phone-legend i.on {
+  background: var(--accent);
+}
+
+.phone-legend i.off {
+  background: var(--c-800);
+}
+
+.phone-cal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.phone-cal span {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 0.3rem;
+  color: var(--c-600);
+  font-size: 0.62rem;
+  font-weight: 600;
+  background: var(--c-100);
+}
+
+.phone-cal span.is-booked {
+  background: var(--accent);
+  color: var(--c-50);
+}
+
+@keyframes phone-rise {
+  from {
+    opacity: 0;
+    transform: translateY(3.5rem);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.phone-left {
+  animation-name: phone-rise-left;
+}
+
+.phone-center {
+  animation-name: phone-rise-center;
+}
+
+.phone-right {
+  animation-name: phone-rise-right;
+}
+
+@keyframes phone-rise-left {
+  from {
+    opacity: 0;
+    transform: translateY(4.5rem) rotate(-4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(2.4rem) rotate(-4deg);
+  }
+}
+
+@keyframes phone-rise-center {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0.4rem);
+  }
+}
+
+@keyframes phone-rise-right {
+  from {
+    opacity: 0;
+    transform: translateY(4.5rem) rotate(4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(2.4rem) rotate(4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone,
+  .phone-left,
+  .phone-center,
+  .phone-right {
+    animation: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .landlord-pitch-actions {
+    flex-direction: column;
+  }
+
+  .landlord-phones {
+    gap: 0.55rem;
+    min-height: 16rem;
+    margin-top: 2.2rem;
+  }
+
+  .phone-screen {
+    min-height: 15rem;
+  }
+
+  .phone-left,
+  .phone-right {
+    transform: translateY(1.8rem) rotate(-3deg);
+  }
+
+  .phone-right {
+    transform: translateY(1.8rem) rotate(3deg);
+  }
+}
+
+@media (max-width: 560px) {
+  .phone-left,
+  .phone-right {
+    display: none;
+  }
+
+  .phone-center {
+    width: min(240px, 70vw);
+    transform: none;
+  }
+}

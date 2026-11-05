@@ -1,0 +1,142 @@
+import type { Listing } from '../types'
+
+export const listings: Listing[] = [
+  {
+    id: 1,
+    title: 'Double room in a redbrick near the canal',
+    location: 'Portobello, Dublin 8',
+    area: 'Dublin 8',
+    city: 'Dublin',
+    price: 780,
+    billsIncluded: true,
+    roomType: 'Double',
+    houseBeds: 3,
+    meta: 'Double · 3-bed house · Ensuite',
+    photo: 'listing-1.jpg',
+    photoCount: 7,
+    available: '1 Dec',
+    landlord: 'Aoife M.',
+    landlordInitial: 'A',
+    description:
+      'A double ensuite in a redbrick near the canal. Shared kitchen and living room, with bills included. Luas, Tesco and the park are a short walk.',
+    walking: ['Luas 4 min', 'Tesco 2 min', 'Park 6 min'],
+    amenities: ['Ensuite', 'Furnished', 'Bills included', 'Kitchen access', 'WiFi'],
+  },
+  {
+    id: 2,
+    title: 'Bright single room, shared garden',
+    location: 'Rathmines, Dublin 6',
+    area: 'Dublin 6',
+    city: 'Dublin',
+    price: 690,
+    billsIncluded: false,
+    roomType: 'Single',
+    houseBeds: 4,
+    meta: 'Single · 4-bed house · Furnished',
+    photo: 'listing-2.jpg',
+    photoCount: 5,
+    available: 'Now',
+    landlord: 'Declan R.',
+    landlordInitial: 'D',
+    description:
+      'A bright single room in Rathmines with a shared garden. Furnished, with a bus stop on the corner and a gym and pharmacy nearby. Bills are extra.',
+    walking: ['Bus 1 min', 'Gym 5 min', 'Pharmacy 3 min'],
+    amenities: ['Furnished', 'Garden', 'Kitchen access', 'WiFi', 'Washer'],
+  },
+  {
+    id: 3,
+    title: 'Double room above a café, balcony',
+    location: 'Ranelagh, Dublin 6',
+    area: 'Dublin 6',
+    city: 'Dublin',
+    price: 850,
+    billsIncluded: true,
+    roomType: 'Double',
+    houseBeds: 2,
+    meta: 'Double · 2-bed apartment · Furnished',
+    photo: 'listing-3.jpg',
+    photoCount: 9,
+    available: '15 Dec',
+    landlord: 'Niamh O.',
+    landlordInitial: 'N',
+    description:
+      'A double room in a Ranelagh apartment above a café, with a balcony and bills included. Luas and the park are minutes away.',
+    walking: ['Luas 3 min', 'Café 1 min', 'Park 5 min'],
+    amenities: ['Furnished', 'Balcony', 'Bills included', 'WiFi', 'Kitchen access'],
+  },
+  {
+    id: 4,
+    title: 'Quiet single room, 7 minutes to the hospital',
+    location: 'Kilmainham, Dublin 8',
+    area: 'Dublin 8',
+    city: 'Dublin',
+    price: 620,
+    billsIncluded: false,
+    roomType: 'Single',
+    houseBeds: 3,
+    meta: 'Single · 3-bed house',
+    photo: 'listing-4.jpg',
+    photoCount: 6,
+    available: 'Now',
+    landlord: 'Seán K.',
+    landlordInitial: 'S',
+    description:
+      'A quiet single room in Kilmainham, about seven minutes from the hospital. Handy for shift work, with a bus stop and Tesco nearby. Bills are extra.',
+    walking: ['Hospital 7 min', 'Bus 2 min', 'Tesco 4 min'],
+    amenities: ['Quiet street', 'Kitchen access', 'WiFi', 'Near hospital', 'Washer'],
+  },
+  {
+    id: 5,
+    title: 'Double room with a desk and garden view',
+    location: 'Rathgar, Dublin 6',
+    area: 'Dublin 6',
+    city: 'Dublin',
+    price: 720,
+    billsIncluded: true,
+    roomType: 'Double',
+    houseBeds: 3,
+    meta: 'Double · 3-bed house · Desk',
+    photo: 'listing-5.jpg',
+    photoCount: 4,
+    available: '1 Jan',
+    landlord: 'Ciara L.',
+    landlordInitial: 'C',
+    description:
+      'A double room with a desk and a garden view in Rathgar. Bills included. Good for someone who works from home and wants a calm street.',
+    walking: ['Bus 2 min', 'Park 4 min', 'Gym 8 min'],
+    amenities: ['Desk', 'Garden view', 'Bills included', 'Furnished', 'WiFi'],
+  },
+  {
+    id: 6,
+    title: 'Single room beside the canal walk',
+    location: "Harold's Cross, Dublin 6W",
+    area: 'Dublin 6W',
+    city: 'Dublin',
+    price: 660,
+    billsIncluded: false,
+    roomType: 'Single',
+    houseBeds: 2,
+    meta: 'Single · 2-bed house',
+    photo: 'listing-6.jpg',
+    photoCount: 8,
+    available: 'Now',
+    landlord: 'Pádraig B.',
+    landlordInitial: 'P',
+    description:
+      "A single room beside the canal walk in Harold's Cross. Quiet evenings, a bus on the door, and a park and pharmacy a few minutes away. Bills are extra.",
+    walking: ['Bus 1 min', 'Park 3 min', 'Pharmacy 5 min'],
+    amenities: ['Canal walk', 'Kitchen access', 'WiFi', 'Furnished', 'Washer'],
+  },
+]
+
+export function getListing(id: number) {
+  return listings.find((item) => item.id === id)
+}
+
+export function formatPrice(listing: Listing) {
+  return `€${listing.price}`
+}
+
+export function formatBills(listing: Listing) {
+  return listing.billsIncluded ? 'bills incl.' : 'bills extra'
+}

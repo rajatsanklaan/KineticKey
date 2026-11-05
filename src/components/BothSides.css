@@ -1,0 +1,133 @@
+.both-sides {
+  padding: 4.5rem 0;
+  background: var(--c-100);
+  border-top: 1px solid var(--c-200);
+}
+
+.both-sides-head {
+  max-width: 40rem;
+}
+
+.both-sides-head h2 {
+  max-width: 28rem;
+}
+
+.both-trust {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2.2rem 0 2rem;
+}
+
+.both-trust article {
+  padding: 1.15rem 1.1rem;
+  background: var(--c-50);
+  border: 1px solid var(--c-200);
+  border-radius: 1rem;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.both-trust article:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.both-trust h3 {
+  margin: 0;
+  color: var(--c-800);
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.both-trust p {
+  margin: 0.45rem 0 0;
+  color: var(--c-500);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.both-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.both-panel {
+  padding: 1.6rem 1.5rem 1.5rem;
+  background: var(--c-50);
+  border: 1px solid var(--c-200);
+  border-radius: 1.2rem;
+  border-top: 4px solid var(--accent);
+}
+
+.both-panel-landlord {
+  border-top-color: var(--c-800);
+}
+
+.both-panel h3 {
+  margin: 0.15rem 0 0;
+  color: var(--c-800);
+  font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+  letter-spacing: -0.035em;
+}
+
+.both-panel > p {
+  margin: 0.75rem 0 0;
+  color: var(--c-500);
+  line-height: 1.55;
+  max-width: 28rem;
+}
+
+.both-panel ul {
+  margin: 1.15rem 0 1.4rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.both-panel li {
+  position: relative;
+  padding-left: 1.55rem;
+  color: var(--c-700);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.both-panel li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 22%, var(--c-50));
+  box-shadow: inset 0 0 0 3px var(--accent);
+}
+
+.both-panel-landlord li::before {
+  background: color-mix(in srgb, var(--c-800) 14%, var(--c-50));
+  box-shadow: inset 0 0 0 3px var(--c-800);
+}
+
+.both-panel .btn {
+  min-width: 9.5rem;
+}
+
+@media (max-width: 900px) {
+  .both-trust {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .both-sides {
+    padding: 3rem 0;
+  }
+
+  .both-trust,
+  .both-split {
+    grid-template-columns: 1fr;
+  }
+}
