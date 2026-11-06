@@ -5,6 +5,8 @@ import Stats from './Stats'
 import RoleCards from './RoleCards'
 import LandlordPitch from './LandlordPitch'
 import BothSides from './BothSides'
+import RecommendedLandlords from './RecommendedLandlords'
+import NewRooms from './NewRooms'
 import PropertyGrid from './PropertyGrid'
 import HowItWorks from './HowItWorks'
 import Testimonials from './Testimonials'
@@ -23,6 +25,8 @@ export default function HomePage({ onNavigate, onOpenListing }: Props) {
       <RoleCards onNavigate={onNavigate} />
       <LandlordPitch onNavigate={onNavigate} />
       <BothSides onNavigate={onNavigate} />
+      <RecommendedLandlords onNavigate={onNavigate} />
+      <NewRooms onOpenListing={onOpenListing} />
       <section className="section">
         <div className="container">
           <div className="section-head">
