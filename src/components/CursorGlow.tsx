@@ -8,12 +8,12 @@ export default function CursorGlow() {
     const glow = glowRef.current
     if (!glow) return
 
-    function move(event: MouseEvent) {
+    const move = (event: MouseEvent) => {
       glow.style.setProperty('--x', `${event.clientX}px`)
       glow.style.setProperty('--y', `${event.clientY}px`)
     }
 
-    function hoverOn(event: MouseEvent) {
+    const hoverOn = (event: MouseEvent) => {
       const target = event.target
       if (!(target instanceof Element)) return
       const hot = target.closest('button, a, input, select, textarea, .hero-visual')
