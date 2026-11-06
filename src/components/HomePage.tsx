@@ -19,7 +19,7 @@ export default function HomePage({ onNavigate, onOpenListing }: Props) {
   return (
     <div className="page">
       <Hero onNavigate={onNavigate} />
-      <Stats />
+      <Stats onNavigate={onNavigate} />
       <RoleCards onNavigate={onNavigate} />
       <LandlordPitch onNavigate={onNavigate} />
       <BothSides onNavigate={onNavigate} />
